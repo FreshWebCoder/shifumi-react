@@ -1,0 +1,130 @@
+.container {
+    width: 800px;
+}
+
+.titleCtn {
+    background-color: #FFF;
+    border-radius: 4px;
+    padding:  20px 0;
+    margin-bottom: 50px;
+}
+
+.scoreCtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scoreCtn h3 {
+    margin-top: 0;
+    padding: 20px 0;
+    background-color: #181848;
+    color: #FFF;
+}
+
+.score {
+    width: 200px;
+    background-color: #FFF;
+    margin-bottom: 20px;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    height: 200px;
+}
+
+.playerHand, .computerHand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF;
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+
+.resultsWinner {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 0 0 50px;
+    padding: 0;
+}
+
+.resultsMessage {
+    font-size: 24px;
+    color: #FFF;
+}
+
+.choiceBtnCtn {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.choiceBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    background-color: #FFF;
+    color: #1a1a1a;
+}
+
+.playBtn {
+    background-color: bisque;
+    padding: 10px 30px;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.bounce {
+    transition: all 0.2s ease-in-out;
+}
+
+.bounce:hover {
+    transform: translateY(-15px);
+}
+
+.activeChoice {
+    background-color: orange;
+}
+
+.timer {
+    color: #FFF;
+    font-size: 160px;
+}
+
+.playerShake {
+    animation: playerShakeAnimation 0.8s ease-in-out infinite;
+}
+
+.computerShake {
+    animation: computerShakeAnimation 0.8s ease-in-out infinite;
+}
+
+@keyframes playerShakeAnimation {
+    0%,
+    100% {
+        transform: rotate(100deg);
+    }
+    50% {
+        transform: rotate(80deg);
+    }
+}
+
+@keyframes computerShakeAnimation {
+    0%,
+    100% {
+        transform: scaleY(-1) rotate(-80deg);
+    }
+    50% {
+        transform: scaleY(-1) rotate(-100deg);
+    }
+}
